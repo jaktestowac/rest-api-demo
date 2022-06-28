@@ -1,0 +1,102 @@
+<html>
+<head>
+    <title>REST API Demo | Tools</title>
+    <link rel="icon" href="../data/icons/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+          integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/controls.css">
+</head>
+
+<body>
+<header>
+    <div style="display: grid;grid-template-columns: 4fr 1fr;">
+        <h1><a href=".." style="text-decoration: none; color: inherit;">REST API Demo</a>
+            <a href="./tools/index.html">
+                <button id="btnTools" class="button-disabled" disabled readOnly>Tools</button>
+            </a>
+            <a href="../tester/index.html">
+                <button id="btnTester" class="button-primary">Tester</button>
+            </a>
+            <a href="./swagger.html">
+                <button id="btnSwagger" class="button-primary">Swagger</button>
+            </a>
+            <a href="./swagger-v2.html">
+                <button id="btnSwagger" class="button-primary">Swagger (JWT)</button>
+            </a></h1>
+
+        <span style="display: flex;align-items:center;justify-self: end;padding-right: 20px;">
+	  <a href="https://jaktestowac.pl" style="text-decoration: none; color: white;" target="_blank" rel="noopener">
+		  <img src="../data/icons/favicon.png" style="width: 30px !important;height: 30px !important;padding: 0;"
+               alt=""></a>
+	  <a href="https://jaktestowac.pl" style="text-decoration: none; color: white;padding:10px" target="_blank"
+         rel="noopener">jaktestowac.pl</a>
+	  </span>
+    </div>
+</header>
+<main>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="containerTools">
+<table>
+    <tr>
+        <td>
+            <div class="containerTools">
+                <h2>GUI: Pages</h2>
+                <ul>
+                    <li><a href="../users.html">Users</a></li>
+                    <li><a href="../user.html?id=1">Single user</a></li>
+                    <li><a href="../articles.html">Articles</a></li>
+                    <li><a href="../article.html?id=1">Single article</a></li>
+                    <li><a href="../comments.html">Comments</a></li>
+                    <li><a href="../comment.html?id=1">Single Comment</a></li>
+                </ul>
+            </div>
+            <div class="containerTools">
+                <h2>API: Endpoints</h2>
+        
+                <div id="resources"></div>
+                <h3>Additional endpoints</h3>
+                    <a href="/api/userpics">Images for user avatar</a><br>
+                    <a href="/api/allimages">Images for article image</a><br>
+                    <p>⚠ Using/clicking endpoint below restores database to intial state</p>
+                    <a href="/api/restoreDB"  target="_blank" rel="noopener">Restore Database</a><br>
+            </div>
+            <div class="containerTools">
+                <h2>API: Documentation</h2>
+                <a href="./swagger.html" id="swagger" target="_blank" rel="noopener">Swagger UI</a><br>
+                <a href="schema/openapi_rest_demo.json" target="_blank" rel="noopener">Open API schema</a><br><br>
+                External:<br><br>
+                <a href="https://editor.swagger.io/#?url=schema/openapi_rest_demo.json" id="swaggerEditor" target="_blank" rel="noopener">Swagger Editor (external)</a><br>
+                <h2>API V2: Documentation for JWT</h2>
+                <a href="./swagger-v2.html" id="swagger2" target="_blank" rel="noopener">Swagger UI</a><br>
+                <a href="schema/openapi_rest_demo_v2.json" target="_blank" rel="noopener">Open API schema</a><br><br>
+            </div>
+            <div class="containerTools">
+                <h2>API: Testing tools</h2>
+                <a href="../tester/">Tester</a><br>
+            </div>
+        </td>
+    </tr>
+</table>
+</div>
+</main>
+
+<script type="text/javascript" src="index.js"></script>
+
+
+<footer>
+    <div class="container" style="font-size:12px;">
+        Version: <span id="version"></span>
+        <p>Copyright
+            <script>document.write(new Date().getFullYear());</script>
+            <a href="https://jaktestowac.pl" target="_blank" rel="noopener">jaktestowac.pl</a></p>
+    </div>
+    <script type="text/javascript" src="../version.js"></script>
+</footer>
+</body>
+</html>

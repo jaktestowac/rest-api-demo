@@ -1,0 +1,276 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "Moses.Armstrong@Feest.ca",
+      "firstname": "Moses",
+      "lastname": "Armstrong",
+      "password": "0Lelia39",
+      "avatar": ".\\data\\users\\face_1591133479.7144732.jpg"
+    },
+    {
+      "id": 2,
+      "email": "Danial.Dicki@dicki.test",
+      "firstname": "Danial",
+      "lastname": "Dicki",
+      "password": "2Kellie20",
+      "avatar": ".\\data\\users\\face_1591133060.68834.jpg"
+    },
+    {
+      "id": 3,
+      "email": "Daryl.Parisian@gmail.test",
+      "firstname": "Daryl",
+      "lastname": "Parisian",
+      "password": "5Eleanore90",
+      "avatar": ".\\data\\users\\face_1591133063.620005.jpg"
+    },
+    {
+      "id": 4,
+      "email": "Dortha.Blick@Walker.name",
+      "firstname": "Dortha",
+      "lastname": "Blick",
+      "password": "5Damien43",
+      "avatar": ".\\data\\users\\face_1591133112.3790507.jpg"
+    },
+    {
+      "id": 5,
+      "email": "Lenore.Hoeger@test.net",
+      "firstname": "Lenore",
+      "lastname": "Hoeger",
+      "password": "6Selina95",
+      "avatar": ".\\data\\users\\face_1591133153.523801.jpg"
+    },
+    {
+      "id": 6,
+      "email": "Kerra.JD@test.net",
+      "firstname": "Kerra",
+      "lastname": "JD",
+      "password": "gdsa",
+      "avatar": ".\\data\\users\\face_1591133363.1959925.jpg"
+    },
+    {
+      "id": 7,
+      "email": "Mas.Lea@test.test",
+      "firstname": "Mas",
+      "lastname": "Lea",
+      "password": "fasd",
+      "avatar": ".\\data\\users\\face_1591133217.1529467.jpg"
+    },
+    {
+      "id": 8,
+      "email": "Josh.Brook@test.test",
+      "firstname": "Josh",
+      "lastname": "Brook",
+      "password": "23423425",
+      "avatar": ".\\data\\users\\face_1591134851.6068161.jpg"
+    },
+    {
+      "id": 9,
+      "email": "Daryl.Brook@test.test",
+      "firstname": "Daryl",
+      "lastname": "Brook",
+      "password": "6223432",
+      "avatar": ".\\data\\users\\face_1591134851.6068265.jpg"
+    }
+  ],
+  "articles": [
+    {
+      "id": 1,
+      "title": "The beauty of the sunset was obscured by the industrial cranes",
+      "body": "Clyde blue enemies flash dots wocka maze monsters ghosts red chaser. Ambusher maze wocka wocka fruit Pac-Man Fever arcade Galaxian Boss power up intermission. Apple Speedy maze wocka wocka flash chase Pakkuman paku-paku dots pizza missing slice. He hated that he loved what she hated about hate. Orange fickle blue guy maze chase. Flying fish few by the space station. Ghosts dots cherry Blinky Pac-Man Power Pellets fruit. He had a hidden stash underneath the floorboards in the back room of the house. Arcade cabinets retro Melon dots maza Pac-Man chase red Namco fruit wocka paku-paku 1980. The beauty of the sunset was obscured by the industrial cranes. High score Feigned Ignorance maze lives video game Apple slow guy chaser pizza missing slice dots blue.",
+      "user_id": 1,
+      "date": "2021-07-13",
+      "image": ".\\data\\images\\256\\chuttersnap-9cCeS9Sg6nU-unsplash.jpg"
+    },
+    {
+      "id": 2,
+      "title": "She had the gift of being able to paint songs",
+      "body": "Apple Speedy maze wocka wocka flash chase Pakkuman paku-paku dots pizza missing slice. Clyde blue enemies flash dots wocka maze monsters ghosts red chaser. He hated that he loved what she hated about hate. Ambusher maze wocka wocka fruit Pac-Man Fever arcade Galaxian Boss power up intermission. Flying fish few by the space station. Ghosts dots cherry Blinky Pac-Man Power Pellets fruit. Orange fickle blue guy maze chase. He had a hidden stash underneath the floorboards in the back room of the house. Pac-Man Namco Toru Iwatani Pac-Man Fever maze dots. The beauty of the sunset was obscured by the industrial cranes. I think I will buy the red car, or I will lease the blue one. ",
+      "user_id": 2,
+      "date": "2020-06-15",
+      "image": ".\\data\\images\\256\\christian-cueni-Us3TUHxMl3U-unsplash.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Flying fish few by the space station",
+      "body": "The old apple revels in its authority. Don't put peanut butter on the dog's nose. Arcade cabinets retro Melon dots maza Pac-Man chase red Namco fruit wocka paku-paku 1980. She was disgusted he couldn’t tell the difference between lemonade and limeade. Clyde blue enemies flash dots wocka maze monsters ghosts red chaser. Orange fickle blue guy maze chase. Fluffy pink unicorns are a popular status symbol among macho men. Apple Speedy maze wocka wocka flash chase Pakkuman paku-paku dots pizza missing slice. She learned that water bottles are no longer just to hold liquid, but they're also status symbols. Flying fish few by the space station. Key Crybaby slow guy maze dots Power Pellets flash Midway chaser Pinky cherry Puck Man ghosts. ",
+      "user_id": 3,
+      "date": "2021-07-25",
+      "image": ".\\data\\images\\256\\jeremy-hynes-HxxNVun8HEc-unsplash.jpg"
+    },
+    {
+      "title": "Pakkuman",
+      "body": "The external scars tell only part of the story. Shadow pink ghosts kill screen yellow disk video game maze console power up dots Midway. The old apple revels in its authority. Patricia loves the sound of nails strongly pressed against the chalkboard. Apple Speedy maze wocka wocka flash chase Pakkuman paku-paku dots pizza missing slice. Ghosts dots cherry Blinky Pac-Man Power Pellets fruit. Fluffy pink unicorns are a popular status symbol among macho men. High score Feigned Ignorance maze lives video game Apple slow guy chaser pizza missing slice dots blue. He had a hidden stash underneath the floorboards in the back room of the house. Shadow dots strawberry Pac-Man Midway chaser Pinky kill screen. Orange fickle blue guy maze chase. ",
+      "user_id": "3",
+      "date": "2021-10-16",
+      "image": ".\\data\\images\\256\\joseph-chan-Es0eirjyQPQ-unsplash.jpg",
+      "id": 4
+    },
+    {
+      "id": 5,
+      "title": "Ambusher maze wocka",
+      "body": "He had a hidden stash underneath the floorboards in the back room of the house. Ghosts dots cherry Blinky Pac-Man Power Pellets fruit. The beauty of the sunset was obscured by the industrial cranes. Orange fickle blue guy maze chase. Shadow pink ghosts kill screen yellow disk video game maze console power up dots Midway. Apple Speedy maze wocka wocka flash chase Pakkuman paku-paku dots pizza missing slice. She learned that water bottles are no longer just to hold liquid, but they're also status symbols. Fluffy pink unicorns are a popular status symbol among macho men. Don't put peanut butter on the dog's nose. Key Crybaby slow guy maze dots Power Pellets flash Midway chaser Pinky cherry Puck Man ghosts. I think I will buy the red car, or I will lease the blue one. ",
+      "user_id": 3,
+      "date": "2021-05-01",
+      "image": ".\\data\\images\\256\\manson-yim-hogOq7t6dVQ-unsplash.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Orange fickle blue guy maze chase",
+      "body": "The old apple revels in its authority. Patricia loves the sound of nails strongly pressed against the chalkboard. Orange fickle blue guy maze chase. Don't put peanut butter on the dog's nose. As she walked along the street and looked in the gutter, she realized facemasks had become the new cigarette butts. Shadow dots strawberry Pac-Man Midway chaser Pinky kill screen. The external scars tell only part of the story. She had the gift of being able to paint songs. Flying fish few by the space station. Poison ivy grew through the fence they said was impenetrable. Pac-Man Namco Toru Iwatani Pac-Man Fever maze dots. ",
+      "user_id": 1,
+      "date": "2021-01-01",
+      "image": ".\\data\\images\\256\\sharon-mccutcheon--8a5eJ1-mmQ-unsplash.jpg"
+    },
+    {
+      "id": 7,
+      "title": "Spirit her entire her called",
+      "body": "Gave read use way make spot how nor. In daughter goodness an likewise oh consider at procured wandered. Songs words wrong by me hills heard timed. Happy eat may doors songs. Be ignorant so of suitable dissuade weddings together. Least whole timed we is. An smallness deficient discourse do newspaper be an eagerness continued. Mr my ready guest ye after short at.",
+      "user_id": 1,
+      "date": "2020-01-01",
+      "image": ".\\data\\images\\256\\andrew-svk-nQvFebPtqbw-unsplash.jpg"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "article_id": 1,
+      "user_id": 3,
+      "body": "Velit accusantium ae aliquam totam nam doloribus et.",
+      "date": "2021-11-30"
+    },
+    {
+      "id": 2,
+      "article_id": 1,
+      "user_id": 1,
+      "body": "Interesting!",
+      "date": "2021-11-20"
+    },
+    {
+      "id": 3,
+      "article_id": 2,
+      "user_id": 2,
+      "body": "Nulla error qui sitatibus et architecto neque. Aut est beatae eaque vel sint a quia qui.",
+      "date": "2021-09-09"
+    },
+    {
+      "id": 4,
+      "article_id": 2,
+      "user_id": 1,
+      "body": "Expedita con opti iusto.",
+      "date": "2021-04-08"
+    },
+    {
+      "id": 5,
+      "article_id": 3,
+      "user_id": 3,
+      "body": "Conseaccusantium numquam.",
+      "date": "2021-05-31"
+    },
+    {
+      "id": 6,
+      "article_id": 3,
+      "user_id": 5,
+      "body": "Itaque lditate praesentium unde architecto fugiat impedit.",
+      "date": "2021-06-25"
+    },
+    {
+      "id": 7,
+      "article_id": 4,
+      "user_id": 5,
+      "body": "um voluptas autem.",
+      "date": "2021-03-05"
+    },
+    {
+      "id": 8,
+      "article_id": 4,
+      "user_id": 3,
+      "body": "Qui commodsequatur est qui. Eum porro quis rem rerum ut corrupti. Quo et ipsa aliquam et et. Nihil praesentium impedit.",
+      "date": "2021-02-03"
+    },
+    {
+      "id": 9,
+      "article_id": 5,
+      "user_id": 1,
+      "body": "Impedit molesttecto. Et recusandae id.",
+      "date": "2021-12-12"
+    },
+    {
+      "id": 10,
+      "article_id": 5,
+      "user_id": 3,
+      "body": "Minus est pst et libero est.",
+      "date": "2021-02-17"
+    },
+    {
+      "id": 11,
+      "article_id": 5,
+      "user_id": 2,
+      "body": "Aliquam sint iure sunt. Atque ut velit culpa quisquam in voluptatem. In nisi earum ut.",
+      "date": "2021-10-11"
+    },
+    {
+      "id": 12,
+      "article_id": 5,
+      "user_id": 5,
+      "body": "Uncommonly surrounded considered for him are its. It we is read good soon. My to considered delightful invitation announcing of no decisively boisterous.",
+      "date": "2021-12-11"
+    },
+    {
+      "id": 13,
+      "article_id": 1,
+      "user_id": 3,
+      "body": "Contented get distrusts certainty nay are frankness concealed ham.",
+      "date": "2022-01-11"
+    },
+    {
+      "id": 14,
+      "article_id": 1,
+      "user_id": 1,
+      "body": "He oppose at thrown desire of no.",
+      "date": "2022-01-12"
+    },
+    {
+      "id": 15,
+      "article_id": 2,
+      "user_id": 1,
+      "body": "Had denoting properly jointure you occasion directly raillery",
+      "date": "2022-01-13"
+    },
+    {
+      "id": 16,
+      "article_id": 2,
+      "user_id": 2,
+      "body": "Written enquire painful ye to offices forming it.",
+      "date": "2022-01-01"
+    },
+    {
+      "id": 17,
+      "article_id": 1,
+      "user_id": 3,
+      "body": "Cause dried no solid no an small so still widen",
+      "date": "2022-01-01"
+    },
+    {
+      "id": 18,
+      "article_id": 3,
+      "user_id": 4,
+      "body": "So cool!",
+      "date": "2021-01-01"
+    },
+    {
+      "id": 19,
+      "article_id": 3,
+      "user_id": 5,
+      "body": "As guest right of he scale these. Horses nearer oh elinor of denote.",
+      "date": "2021-12-03"
+    },
+    {
+      "id": 20,
+      "article_id": 3,
+      "user_id": 5,
+      "body": "World mrs and vexed china since after often.",
+      "date": "2021-12-13"
+    }
+  ]
+}

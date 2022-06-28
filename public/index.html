@@ -1,0 +1,67 @@
+<html>
+<head>
+    <title>REST API Demo</title>
+    <link rel="icon" href="./data/icons/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+          integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="css/controls.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <div style="display: grid;grid-template-columns: 4fr 1fr;">
+        <h1><a href="." style="text-decoration: none; color: inherit;">REST API Demo</a>
+            
+        </h1>
+        <span style="display: flex;align-items:center;justify-self: end;padding-right: 20px;">
+	  <a href="https://jaktestowac.pl" style="text-decoration: none; color: white;" target="_blank" rel="noopener">
+		  <img src="./data/icons/favicon.png" style="width: 30px !important;height: 30px !important;padding: 0;"
+               alt=""></a>
+	  <a href="https://jaktestowac.pl" style="text-decoration: none; color: white;padding:10px" target="_blank"
+         rel="noopener">jaktestowac.pl</a>
+	  </span>
+    </div>
+</header>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="container" id="pageHeader" style="font-size:12px;align-content: center;display: flex;align-items: center;justify-content: center;">
+    <h1>Witaj na stronie do testów REST API!</h1>
+</div>
+<div class="container" style="font-size:12px;align-content: center;display: flex;align-items: center;justify-content: center;">
+Możesz na niej poćwiczyć testy UI oraz testy API w bezpiecznym środowisku.
+</div>
+<br>
+<br>
+<br>
+<div class="container" style="align-content: center;display: flex;align-items: center;justify-content: center;font-size: 24px;">
+<span style="display: flex;align-items:center;justify-self: center;">
+        <img src="../data/icons/favicon.png" style="width: 50px !important;height: 50px !important;padding: 0;border: none;"
+             alt="">&nbsp&nbspjaktestowac.pl
+</span>
+</div>
+
+<div class="container" style="font-size:12px;align-content: center;display: flex;align-items: center;justify-content: center;">
+    <a href="./articles.html">
+        <button class="button-primary" id="btnGui" style="margin: 20;font-size: 28px;">GUI</button>
+    </a>
+    <a href="./tools/index.html">
+        <button class="button-primary" id="btnApiTools" style="margin: 20;font-size: 28px;">API Tools</button>
+    </a>
+</div>
+</body>
+<footer>
+    <div class="container" style="font-size:12px;">
+        Version: <span id="version"></span>
+        <p>Copyright
+            <script>document.write(new Date().getFullYear());</script>
+            <a href="https://jaktestowac.pl" target="_blank" rel="noopener">jaktestowac.pl</a></p>
+    </div>
+    <script type="text/javascript" src="version.js"></script>
+</footer>
+</html>

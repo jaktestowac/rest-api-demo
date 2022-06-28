@@ -1,0 +1,65 @@
+<html>
+<head>
+    <title>REST API Demo | Comment</title>
+    <link rel="icon" href="./data/icons/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+          integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="css/controls.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <div style="display: grid;grid-template-columns: 4fr 1fr;">
+        <h1><a href="." style="text-decoration: none; color: inherit;">REST API Demo</a>
+            <a href="./articles.html">
+                <button id="btnArticles" class="button-primary">Articles</button>
+            </a>
+            <a href="./users.html">
+                <button id="btnUsers" class="button-primary">Users</button>
+            </a>
+            <a href="./comments.html">
+                <button id="btnComments" class="button-primary">Comments</button>
+            </a>
+            </h1>
+
+        <span style="display: flex;align-items:center;justify-self: end;padding-right: 20px;">
+	  <a href="https://jaktestowac.pl" style="text-decoration: none; color: white;" target="_blank" rel="noopener">
+		  <img src="./data/icons/favicon.png" style="width: 30px !important;height: 30px !important;padding: 0;"
+               alt=""></a>
+	  <a href="https://jaktestowac.pl" style="text-decoration: none; color: white;padding:10px" target="_blank"
+         rel="noopener">jaktestowac.pl</a>
+	  </span>
+    </div>
+</header>
+<div class="alert" role="alert"></div>
+<div id="container"></div>
+<section class="add-new-panel">
+    <div>
+        <h2>Add New Entry</h2>
+        <label>Article id:</label>
+        <input type="text" class="article_id" value=""><br>
+
+        <label>Body:</label>
+        <input type="text" class="body" value=""><br>
+
+        <label></label>
+        <button type="button" class="update save button-primary">Save</button>
+        <button type="button" class="cancel">Cancel</button>
+
+        <button class="close" id="close">&times;</button>
+    </div>
+</section>
+<script type="text/javascript" src="js/comment.js"></script>
+</body>
+<footer>
+    <div class="container" style="font-size:12px;">
+        Version: <span id="version"></span>
+        <p>Copyright
+            <script>document.write(new Date().getFullYear());</script>
+            <a href="https://jaktestowac.pl" target="_blank" rel="noopener">jaktestowac.pl</a></p>
+    </div>
+    <script type="text/javascript" src="version.js"></script>
+</footer>
+</html>
