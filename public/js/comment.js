@@ -37,7 +37,7 @@ const getItemHTML = (item) => {
 
   if (item.id !== undefined && item.id !== "undefined") {
     controls = `<div class="controls" >
-            <i class="fas fa-edit edit" id="${item.id}"></i>
+            <i class="fas fa-edit edit" testid="edit-${item.id}" id="${item.id}"></i>
         </div>`;
     // <i class="fas fa-trash delete" id="${item.id}"></i>
   }

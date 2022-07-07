@@ -204,6 +204,7 @@ const attachEventHandlers = () => {
   };
   document.querySelector(".update.save").onclick = handleCreate;
   // document.querySelector('.partialUpdate.save').onclick = handlePartialUpdate;
+  document.querySelector("#add-new").disabled = false;
 };
 
 const attachFormEventHandlers = (item, container) => {
@@ -293,13 +294,13 @@ const displayEmailForm = (item, container) => {
 const getItemHTML = (item) => {
   return `<div>
         <div class="controls">
-            <i class="fas fa-edit edit" id="${item.id}"></i>
-            <i class="fas fa-trash delete" id="${item.id}"></i>
+            <i class="fas fa-edit edit" testid="edit-${item.id}" id="${item.id}"></i>
+            <i class="fas fa-trash delete" testid="delete-${item.id}" id="${item.id}"></i>
         </div>
         <label>id:</label><span>${item.id}</span><br>
         <label>firstname:</label><span>${item.firstname}</span><br>
         <label>lastname:</label><span>${item.lastname}</span><br>
-        <label>email:</label><span>${item.email}</span><i class="fas fa-edit emailEdit" id="${item.id}"></i><br>
+        <label>email:</label><span>${item.email}</span><i class="fas fa-edit emailEdit" testid="emailEdit-${item.id}" id="${item.id}"></i><br>
         <label>avatar:</label><a href="user.html?id=${item.id}" id="gotoUser${item.id}"><img src="${item.avatar}" /></a>
     </div>`;
 };

@@ -70,6 +70,7 @@ const attachEventHandlers = () => {
     document.querySelector(".add-new-panel").classList.remove("active");
   };
   document.querySelector(".update.save").onclick = handleCreate;
+  document.querySelector("#add-new").disabled = false;
 };
 
 let alertElement = document.querySelector(".alert");

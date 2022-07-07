@@ -88,8 +88,8 @@ const getItemHTML = (item) => {
 
   if (item.id !== undefined && item.id !== "undefined") {
     controls = `<div class="controls" >
-            <i class="fas fa-edit edit" id="${item.id}"></i>
-            <i class="fas fa-trash delete" id="${item.id}"></i>
+            <i class="fas fa-edit edit" disabled testid="edit-${item.id}" id="${item.id}"></i>
+            <i class="fas fa-trash delete" disabled testid="delete-${item.id}" id="${item.id}"></i>
         </div>`;
   }
 
@@ -98,7 +98,7 @@ const getItemHTML = (item) => {
         ${getImagesHTML(item.image)}<br>
         <label>title:</label><span>${
           item.title
-        }</span><i class="fas fa-edit editName" id="${item.id}"></i><br>
+        }</span><i class="fas fa-edit editName" disabled testid="editName-${item.id}" id="${item.id}"></i><br>
         <label>user:</label><span><a href="user.html?id=${item.user_id}">${
     item.user_name
   }</a></span><br>
@@ -381,12 +381,15 @@ const actionAfterDelete = () => {
 const attachEventHandlers = () => {
   for (elem of document.querySelectorAll(".delete")) {
     elem.onclick = handleDelete;
+    elem.disabled = false;
   }
   for (elem of document.querySelectorAll(".edit")) {
     elem.onclick = showEditForm;
+    elem.disabled = false;
   }
   for (elem of document.querySelectorAll(".editName")) {
     elem.onclick = showEditNameForm;
+    elem.disabled = false;
   }
   document.querySelector("#add-new").onclick = () => {
     window.scrollTo(0, 0);
@@ -405,6 +408,8 @@ const attachEventHandlers = () => {
     location.reload();
   };
   document.querySelector(".update.save").onclick = handleCommentCreate;
+
+  document.querySelector("#add-new").disabled = false;
 };
 
 const attachFormEventHandlers = (item, container) => {

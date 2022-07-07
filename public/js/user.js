@@ -256,7 +256,7 @@ const displayForm = (item, container) => {
             
             <input  style="visibility:hidden;"  type="text" id="password" disabled readOnly value="${item.password}"><br>
             <label></label>
-            <button type="button" data-id="${item.id}" class="update button-primary">Update</button>
+            <button type="button" data-id="${item.id}" testid="update-${item.id}" class="update button-primary">Update</button>
             <button type="button" class="cancel">Cancel</button>
         </div>
     `;
@@ -273,7 +273,7 @@ const displayEmailForm = (item, container) => {
             <label>avatar:</label><a href="user.html?id=${item.id}" id="gotoUser${item.id}"><img src="${item.avatar}" /></a>
             
             </br>
-            <button type="button" data-id="${item.id}" class="partialUpdate button-primary">Update</button>
+            <button type="button" data-id="${item.id}" testid="partialUpdate-${item.id}" class="partialUpdate button-primary">Update</button>
             <button type="button" class="cancel">Cancel</button>
         </div>
     `;
