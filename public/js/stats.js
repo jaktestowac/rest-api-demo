@@ -75,12 +75,6 @@ const displayData = () => {
        commentsOptions = {'title':'Number of comments', 'width':400, 'height':400, 'legend': {'position': 'left', 'textStyle' :{ 'fontSize': 10}}};
        articlesOptions.chartArea = {'left': 20, 'right': 20, 'top': 40, 'bottom': 20}
        commentsOptions.chartArea = {'left': 20, 'right': 20, 'top': 40, 'bottom': 20}
-    } else if (chartType === 'sum') {
-        articlesChart = new google.visualization.ColumnChart(document.getElementById('articlesPerUserChart'));
-        commentsChart = new google.visualization.ColumnChart(document.getElementById('commentsPerUserChart'));
-
-        articlesOptions = {'title':'Number of articles', 'width':400, 'height':400, 'legend': {'position': 'none'}};
-        commentsOptions = {'title':'Number of comments', 'width':400, 'height':400, 'legend': {'position': 'none'}};
     } else {
         articlesChart = new google.visualization.ColumnChart(document.getElementById('articlesPerUserChart'));
         commentsChart = new google.visualization.ColumnChart(document.getElementById('commentsPerUserChart'));
