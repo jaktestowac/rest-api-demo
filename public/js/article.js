@@ -5,6 +5,7 @@ let user_name = "Unknown";
 let users = [];
 let article_id = undefined;
 let articleData;
+let articleDataForExport;
 
 async function issueGetRequest(article_id) {
   const articlesUrl = `${articlesEndpoint}/${article_id}`;
@@ -21,10 +22,10 @@ async function issueGetRequest(article_id) {
     [commentsUrl].map((url) => fetch(url).then((r) => r.json()))
   );
   articleData = articlesData[0];
+  articleDataForExport = JSON.parse(JSON.stringify(articlesData));
   const userComments = comments[0];
 
   articleData.comments = userComments;
-
   // sort comments by date:
   articleData.comments.sort((a, b) => a.date < b.date);
   article_id = articleData.id;
@@ -103,6 +104,7 @@ const getItemHTML = (item) => {
     item.user_name
   }</a></span><br>
         <label>date:</label><span>${item.date}</span><br>
+        <div align="center" ><a id="download" ><button id="btnDownloadCsv" disabled class="button-secondary">Download article as CSV</button></a></div>
         <label></label><span>${item.body}</span><br>
     </div>`;
 };
@@ -167,9 +169,6 @@ function getParams() {
   );
   return values;
 }
-
-article_id = getParams()["id"];
-issueGetRequest(article_id);
 
 let alertElement = document.querySelector(".alert");
 
@@ -409,8 +408,33 @@ const attachEventHandlers = () => {
   };
   document.querySelector(".update.save").onclick = handleCommentCreate;
 
+  document.querySelector("#btnDownloadCsv").onclick = () => {
+      download("article_data.csv");
+  };
+
   document.querySelector("#add-new").disabled = false;
+  document.querySelector("#btnDownloadCsv").disabled = false;
 };
+
+const jsonToCSV = (object) => {
+  let csv = Object.entries(Object.entries(object)[0][1]).map((e) => e[0]).join(",");
+  for (const [k,v] of Object.entries(object)) {
+    csv += "\r\n" + Object.values(v).join(",")
+  }
+  return csv;
+}
+
+const download = (filename) => {
+  const text = jsonToCSV(articleDataForExport)
+
+  var element = document.createElement('a');
+  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+  element.setAttribute('download', filename);
+  element.style.display = 'none';
+  document.body.appendChild(element);
+  element.click();
+  document.body.removeChild(element);
+}
 
 const attachFormEventHandlers = (item, container) => {
   container.querySelector(".update").onclick = handleUpdate;
@@ -492,6 +516,10 @@ const displayNameForm = (item, container) => {
               item.id
             }" class="updateName button-primary">Update</button>
             <button type="button" class="cancel">Cancel</button>
+        <br><br>
         </div>
     `;
 };
+
+article_id = getParams()["id"];
+issueGetRequest(article_id);

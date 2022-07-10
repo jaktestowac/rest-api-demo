@@ -1,9 +1,10 @@
 const usersEndpoint = "../../api/users";
 let alertElement = document.querySelector(".alert");
+let usersData;
 
 async function issueGetRequest(user_id) {
   const userUrl = `${usersEndpoint}/${user_id}`;
-  const usersData = await Promise.all(
+  usersData = await Promise.all(
     [userUrl].map((url) => fetch(url).then((r) => r.json()))
   );
 
@@ -191,7 +192,32 @@ const attachEventHandlers = () => {
     document.querySelector(".add-new-panel").classList.remove("active");
   };
   document.querySelector(".update.save").onclick = handleCreate;
+
+  document.querySelector("#btnDownloadCsv").onclick = () => {
+      download("user_data.csv");
+  };
+  document.querySelector("#btnDownloadCsv").disabled = false;
 };
+
+const jsonToCSV = (object) => {
+  let csv = Object.entries(Object.entries(object)[0][1]).map((e) => e[0]).join(",");
+  for (const [k,v] of Object.entries(object)) {
+    csv += "\r\n" + Object.values(v).join(",")
+  }
+  return csv;
+}
+
+const download = (filename) => {
+  const text = jsonToCSV(usersData)
+
+  var element = document.createElement('a');
+  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+  element.setAttribute('download', filename);
+  element.style.display = 'none';
+  document.body.appendChild(element);
+  element.click();
+  document.body.removeChild(element);
+}
 
 const attachFormEventHandlers = (item, container) => {
   container.querySelector(".update").onclick = handleUpdate;
@@ -296,7 +322,10 @@ const getItemHTML = (item) => {
         <label>firstname:</label><span>${item.firstname}</span><br>
         <label>lastname:</label><span>${item.lastname}</span><br>
         <label>email:</label><span>${item.email}</span><i class="fas fa-edit emailEdit" id="${item.id}"></i><br>
-        <label>avatar:</label><img src="${item.avatar}" />
+        <label>avatar:</label><br>
+        <div align="center" ><img src="${item.avatar}" /></div>
+        <br><br>
+        <div align="center" ><a id="download" ><button disabled id="btnDownloadCsv" class="button-secondary">Download user data as CSV</button></a></div>
     </div>`;
 };
 

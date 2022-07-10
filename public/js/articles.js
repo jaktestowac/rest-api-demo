@@ -31,8 +31,9 @@ async function issueGetRequest() {
     }
   }
   // sort articles by date:
-  articlesData.sort((a, b) => a.date < b.date);
-
+    articlesData.sort(function (a, b) {
+        return a.date < b.date || `${a.id}`.localeCompare(`${b.id}`);
+    });
   displayPostsData(articlesData);
   attachEventHandlers();
 }
