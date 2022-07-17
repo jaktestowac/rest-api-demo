@@ -36,10 +36,12 @@
 <div class="alert" role="alert"></div>
 <div align="center">
 <div id="container"></div>
-    Chart Type:
-    <a id="columnChart" href="./articlestats.html" ><button id="btnColumnChart" class="button-secondary">Column</button></a>
-    <a id="pieChart" href="./articlestats.html?type=pie" ><button id="btnPieCHart" class="button-secondary">Pie</button></a>
- <table>
+    Data Type:
+    <a id="columnChart" href="./articlestats.html" ><button id="btnColumnChart" class="button-secondary">Column Chart</button></a>
+    <a id="pieChart" href="./articlestats.html?type=pie" ><button id="btnPieChart" class="button-secondary">Pie Chart</button></a>
+    <a id="table" href="./articlestats.html?type=table" ><button id="btnTableData" class="button-secondary">Table</button></a>
+
+<table id="tableChart" style="visibility: hidden;">
   <tr>
     <th style="width:50%">Comments per Article</th>
   </tr>
@@ -48,9 +50,16 @@
         <div align="center" ><a id="downloadArticlesDataCsv" ><button disabled id="btnDownloadArticlesDataCsv" class="button-secondary">Download as CSV</button></a></div></td>
   </tr>
 </table>
+
+<table id="tableData" style="visibility: hidden;">
+    <tbody id="tableDataBody">
+          <tr>
+            <th style="width:75%">Article</th>
+            <th style="width:25%">Comments</th>
+          </tr>
+    </tbody>
+</table>
 </div>
-
-
 
 <script src="https://www.gstatic.com/charts/loader.js"></script>
 <script type="text/javascript" src="js/articlestats.js"></script>

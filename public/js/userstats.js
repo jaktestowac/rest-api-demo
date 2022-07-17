@@ -66,6 +66,8 @@ const displayData = () => {
     let commentsOptions;
     let articlesChart;
     let commentsChart;
+    let typeIsCharts = false
+    let typeIsTable = false
 
     if (chartType === 'pie') {
        articlesChart = new google.visualization.PieChart(document.getElementById('articlesPerUserChart'));
@@ -75,25 +77,47 @@ const displayData = () => {
        commentsOptions = {'title':'Number of comments', 'width':400, 'height':400, 'legend': {'position': 'left', 'textStyle' :{ 'fontSize': 10}}};
        articlesOptions.chartArea = {'left': 20, 'right': 20, 'top': 40, 'bottom': 20}
        commentsOptions.chartArea = {'left': 20, 'right': 20, 'top': 40, 'bottom': 20}
+       typeIsCharts = true
+    } else if (chartType === 'table') {
+        typeIsTable = true
     } else {
         articlesChart = new google.visualization.ColumnChart(document.getElementById('articlesPerUserChart'));
         commentsChart = new google.visualization.ColumnChart(document.getElementById('commentsPerUserChart'));
 
         articlesOptions = {'title':'Number of articles', 'width':400, 'height':400, 'legend': {'position': 'none'}};
         commentsOptions = {'title':'Number of comments', 'width':400, 'height':400, 'legend': {'position': 'none'}};
+        typeIsCharts = true
     }
 
-    articlesChart.draw(articlesDataTable, articlesOptions);
-    commentsChart.draw(commentsDataTable, commentsOptions);
+    if (typeIsCharts) {
+        articlesChart.draw(articlesDataTable, articlesOptions);
+        commentsChart.draw(commentsDataTable, commentsOptions);
 
-    document.querySelector("#btnDownloadArticlesDataCsv").onclick = () => {
-      download("articles_data.csv", articlesDataForChart);
-    };
-    document.querySelector("#btnDownloadCommentsDataCsv").onclick = () => {
-      download("comments_data.csv", commentsDataForChart);
-    };
-    document.querySelector("#btnDownloadArticlesDataCsv").disabled = false;
-    document.querySelector("#btnDownloadCommentsDataCsv").disabled = false;
+        document.querySelector("#btnDownloadArticlesDataCsv").onclick = () => {
+          download("articles_data.csv", articlesDataForChart);
+        };
+        document.querySelector("#btnDownloadCommentsDataCsv").onclick = () => {
+          download("comments_data.csv", commentsDataForChart);
+        };
+        document.querySelector("#btnDownloadArticlesDataCsv").disabled = false;
+        document.querySelector("#btnDownloadCommentsDataCsv").disabled = false;
+        document.querySelector("#tableChart").style.visibility= "visible"
+        document.querySelector("#tableData").style.visibility= "collapse"
+    }
+    if (typeIsTable) {
+        const tableElement = document.getElementById("tableDataBody");
+        for (const user_id in userIdToName) {
+            let userName = userIdToName[user_id]
+            let userLink = `<a href="user.html?id=${user_id}">${userName}</a>`
+            let articlesCount = articlesPerUser[user_id] ?? 0
+            let commentsCount = commentsPerUser[user_id] ?? 0
+            tableElement.innerHTML += `<tr><td style="text-align: center">${userLink}</td>
+                <td style="text-align: center">${articlesCount}</td>
+                <td style="text-align: center">${commentsCount}</td></tr>`
+        }
+        document.querySelector("#tableData").style.visibility= "visible"
+        document.querySelector("#tableChart").style.visibility= "collapse"
+    }
 };
 
 const jsonToCSV = (object) => {

@@ -4,8 +4,7 @@
   "description": "Simple application with GUI and API to deploy to Heroku",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "mockdata": "node mockdata.js"
+    "start": "node server.js"
   },
   "keywords": [
     "json-server, heroku, node, REST API"

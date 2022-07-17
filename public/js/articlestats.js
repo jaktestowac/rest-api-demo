@@ -41,8 +41,8 @@ const displayData = () => {
 
     const articlesDataForChart = [['Article', 'Number of comments']]
 
-    for (const user_id in commentsPerArticle) {
-       articlesDataForChart.push([articleIdToTitle[user_id], commentsPerArticle[user_id]])
+    for (const article_id in commentsPerArticle) {
+       articlesDataForChart.push([articleIdToTitle[article_id], commentsPerArticle[article_id]])
     }
 
     // Doc: https://developers.google.com/chart/interactive/docs/gallery/columnchart?hl=pl
@@ -50,23 +50,45 @@ const displayData = () => {
 
     let commentsPerArticleOptions;
     let commentsPerArticleChart;
+    let typeIsCharts = false
+    let typeIsTable = false
 
     if (chartType === 'pie') {
        commentsPerArticleChart = new google.visualization.PieChart(document.getElementById('commentsPerArticle'));
 
        commentsPerArticleOptions = {'title':'Number of comments per article', 'width':720, 'height':400, 'legend': {'position': 'left', 'textStyle' :{ 'fontSize': 10}}};
        commentsPerArticleOptions.chartArea = {'left': 20, 'right': 20, 'top': 40, 'bottom': 20}
+       typeIsCharts = true
+    } else if (chartType === 'table') {
+        typeIsTable = true
     } else {
         commentsPerArticleChart = new google.visualization.ColumnChart(document.getElementById('commentsPerArticle'));
         commentsPerArticleOptions = {'title':'Number of comments per article', 'width':720, 'height':400, 'legend': {'position': 'none'}};
+        typeIsCharts = true
     }
 
-    commentsPerArticleChart.draw(articlesDataTable, commentsPerArticleOptions);
+    if (typeIsCharts) {
+        commentsPerArticleChart.draw(articlesDataTable, commentsPerArticleOptions);
 
-    document.querySelector("#btnDownloadArticlesDataCsv").onclick = () => {
-      download("comments_per_article_data.csv", articlesDataForChart);
-    };
-    document.querySelector("#btnDownloadArticlesDataCsv").disabled = false;
+        document.querySelector("#btnDownloadArticlesDataCsv").onclick = () => {
+          download("comments_per_article_data.csv", articlesDataForChart);
+        };
+        document.querySelector("#btnDownloadArticlesDataCsv").disabled = false;
+        document.querySelector("#tableChart").style.visibility= "visible"
+        document.querySelector("#tableData").style.visibility= "collapse"
+    }
+    if (typeIsTable) {
+        const tableElement = document.getElementById("tableDataBody");
+        for (const article_id in articleIdToTitle) {
+            let articleName = articleIdToTitle[article_id]
+            let articleLink = `<a href="article.html?id=${article_id}">${articleName}</a>`
+            let commentsCount = commentsPerArticle[article_id] ?? 0
+            tableElement.innerHTML += `<tr><td style="text-align: center">${articleLink}</td>
+                <td style="text-align: center">${commentsCount}</td></tr>`
+        }
+        document.querySelector("#tableData").style.visibility= "visible"
+        document.querySelector("#tableChart").style.visibility= "collapse"
+    }
 };
 
 const jsonToCSV = (object) => {
