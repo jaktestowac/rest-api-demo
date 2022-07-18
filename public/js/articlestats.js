@@ -75,9 +75,10 @@ const displayData = () => {
         };
         document.querySelector("#btnDownloadArticlesDataCsv").disabled = false;
         document.querySelector("#tableChart").style.visibility= "visible"
-        document.querySelector("#tableData").style.visibility= "collapse"
+        document.querySelector("#tableArea").style.visibility= "collapse"
     }
     if (typeIsTable) {
+        const tableDataForCsv = [['Article', 'Comments']]
         const tableElement = document.getElementById("tableDataBody");
         for (const article_id in articleIdToTitle) {
             let articleName = articleIdToTitle[article_id]
@@ -85,21 +86,27 @@ const displayData = () => {
             let commentsCount = commentsPerArticle[article_id] ?? 0
             tableElement.innerHTML += `<tr><td style="text-align: center">${articleLink}</td>
                 <td style="text-align: center">${commentsCount}</td></tr>`
+            tableDataForCsv.push([articleName, commentsCount])
         }
-        document.querySelector("#tableData").style.visibility= "visible"
+        document.querySelector("#tableArea").style.visibility= "visible"
         document.querySelector("#tableChart").style.visibility= "collapse"
+        document.querySelector("#btnDownloadTableDataCsv").onclick = () => {
+          download("articles_table_data.csv", tableDataForCsv);
+        };
+        document.querySelector("#btnDownloadTableDataCsv").disabled = false;
     }
 };
 
+const CSV_SEP = ';'
 const jsonToCSV = (object) => {
   let csv = '';
   if(!Array.isArray(object)) {
-     csv = Object.entries(Object.entries(object)[0][1]).map((e) => e[0]).join(",");
+     csv = Object.entries(Object.entries(object)[0][1]).map((e) => e[0]).join(CSV_SEP);
      csv += "\r\n";
   }
 
   for (const [k,v] of Object.entries(object)) {
-    csv += Object.values(v).join(",") + "\r\n";
+    csv += Object.values(v).join(CSV_SEP) + "\r\n";
   }
   return csv;
 }

@@ -112,6 +112,7 @@ const showMessage = (message, isError = false) => {
   alertElement.parentNode.replaceChild(newMessageElement, alertElement);
   alertElement = newMessageElement;
 };
+
 function pad(num, size = 2) {
   num = num.toString();
   while (num.length < size) num = "0" + num;
@@ -139,6 +140,7 @@ const handleCreate = () => {
   issueArticleRequest(data, issueGetRequest);
   document.querySelector(".add-new-panel").classList.remove("active");
 };
+
 const issueArticleRequest = (data, responseHandler) => {
   // create data on the server:
   console.log("POST request:", articlesEndpoint, data);

@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>REST API Demo | Users</title>
+    <title>REST API Demo | Articles</title>
     <link rel="icon" href="./data/icons/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
@@ -17,13 +17,16 @@
                 <button id="btnArticles" class="button-primary">Articles</button>
             </a>
             <a href="./users.html">
-                <button id="btnUsers" class="button-primary" >Users</button>
+                <button id="btnUsers" class="button-primary">Users</button>
             </a>
             <a href="./comments.html">
                 <button id="btnComments" class="button-primary">Comments</button>
             </a>
-            </h1>
-
+            Actions:
+            <a href="./articlestats.html">
+                <button id="btnStats" class="button-primary">Stats</button>
+            </a>
+        </h1>
         <span style="display: flex;align-items:center;justify-self: end;padding-right: 20px;">
 	  <a href="https://jaktestowac.pl" style="text-decoration: none; color: white;" target="_blank" rel="noopener">
 		  <img src="./data/icons/favicon.png" style="width: 30px !important;height: 30px !important;padding: 0;"
@@ -34,37 +37,19 @@
     </div>
 </header>
 <div class="alert" role="alert"></div>
-<div align="center">
 <div id="container"></div>
-    Data Type:
-    <a id="columnChart" href="./articlestats.html" ><button id="btnColumnChart" class="button-secondary">Column Chart</button></a>
-    <a id="pieChart" href="./articlestats.html?type=pie" ><button id="btnPieChart" class="button-secondary">Pie Chart</button></a>
-    <a id="table" href="./articlestats.html?type=table" ><button id="btnTableData" class="button-secondary">Table</button></a>
+    <div align="center">
+        <h2>Upload New Entry</h2>
+        <div id="uploads"></div>
+        <div class="dropzone" id="dropzone">Drop Here</div>
 
-<table id="tableChart" style="visibility: hidden;">
-  <tr>
-    <th style="width:50%">Comments per Article</th>
-  </tr>
-  <tr>
-    <td><div align="center" id="commentsPerArticle"></div>
-        <div align="center" ><a id="downloadArticlesDataCsv" ><button disabled id="btnDownloadArticlesDataCsv" class="button-secondary">Download as CSV</button></a></div></td>
-  </tr>
-</table>
+        <div id="infoContainer"></div>
+        <button type="button" class="update save" id="uploadBtn" disabled>Upload</button>
 
-<div id="tableArea" align="center" style="visibility: hidden;" >
-<table id="tableData" >
-    <tbody id="tableDataBody">
-          <tr>
-            <th style="width:75%">Article</th>
-            <th style="width:25%">Comments</th>
-          </tr>
-    </tbody>
-</table>
-<a id="downloadTableDataCsv" ><button disabled id="btnDownloadTableDataCsv" class="button-secondary">Download as CSV</button></a></div>
-</div>
-
-<script src="https://www.gstatic.com/charts/loader.js"></script>
-<script type="text/javascript" src="js/articlestats.js"></script>
+        <a href="./articles.html">
+            <button type="button" class="cancel">Cancel</button>
+        </a>
+    </div>
 </body>
 <footer>
     <div class="container" style="font-size:12px;">
@@ -75,4 +60,5 @@
     </div>
     <script type="text/javascript" src="version.js"></script>
 </footer>
+<script type="text/javascript" src="js/articlesupload.js"></script>
 </html>
