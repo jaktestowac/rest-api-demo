@@ -180,12 +180,8 @@ const getItemHTML = (item) => {
         <a href="article.html?id=${item.id}" id="gotoArticle${
     item.id
   }">${getImagesHTML(item.image)}</a><br>
-        <div align="center" ><strong>${item.title}</strong></div><br>
-        <label>user:</label><span><a href="user.html?id=${
-          item.user_id
-        }" id="gotoUser${item.user_id}-${item.id}">${
-    item.user_name
-  }</a></span><br>
+        <div align="center" ><strong><a href="article.html?id=${item.id}">${item.title}</a></strong></div><br>
+        <label>user:</label><span><a href="user.html?id=${item.user_id}" id="gotoUser${item.user_id}-${item.id}">${item.user_name}</a></span><br>
         <label>date:</label><span>${item.date}</span><br>
         <label></label><span>${item.body?.substring(0, 200)} (...)</span><br>
         <span><a href="article.html?id=${item.id}" id="seeArticle${

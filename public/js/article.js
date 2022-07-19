@@ -416,10 +416,11 @@ const attachEventHandlers = () => {
   document.querySelector("#btnDownloadCsv").disabled = false;
 };
 
+const CSV_SEP = ';'
 const jsonToCSV = (object) => {
-  let csv = Object.entries(Object.entries(object)[0][1]).map((e) => e[0]).join(",");
+  let csv = Object.entries(Object.entries(object)[0][1]).map((e) => e[0]).join(CSV_SEP);
   for (const [k,v] of Object.entries(object)) {
-    csv += "\r\n" + Object.values(v).join(",")
+    csv += "\r\n" + Object.values(v).join(CSV_SEP)
   }
   return csv;
 }

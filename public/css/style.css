@@ -92,6 +92,7 @@ header h1 {
     margin: 40px 0px 0px 40px;
     width: 100%;
     min-height: 280px;
+    max-width: 780px;
 }
 #container .card-wrapper {
     display: flex;
