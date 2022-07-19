@@ -171,15 +171,42 @@ table {
         margin-left: 10px !important;
     }
   }
-  @media only screen and (max-width: 650px) {
-      header {
-          font-size: 0.5rem;
-      }
-      button {
-          font-size: 0.5rem;
-          padding: 5px;
-      }
-      header h1 {
-          margin-left: 10px !important;
-      }
-    }
+@media only screen and (max-width: 730px) {
+  header {
+      font-size: 0.55rem;
+  }
+  button {
+      font-size: 0.55rem;
+      padding: 5px;
+  }
+  header h1 {
+      margin-left: 10px !important;
+  }
+}
+
+@media only screen and (max-width: 590px) {
+  header {
+      font-size: 0.45rem;
+  }
+  button {
+      font-size: 0.45rem;
+      padding: 5px;
+  }
+  header h1 {
+      margin-left: 10px !important;
+  }
+}
+
+
+@media only screen and (max-width: 500px) {
+  header {
+      font-size: 0.4rem;
+  }
+  button {
+      font-size: 0.4rem;
+      padding: 5px;
+  }
+  header h1 {
+      margin-left: 10px !important;
+  }
+}

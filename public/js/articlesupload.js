@@ -32,7 +32,13 @@ const issueArticleRequest = (data) => {
     },
     body: JSON.stringify(data),
   })
-    .then((response) => showResponse(response))
+    .then((response) => {
+        response.json().then(data => {
+            console.log(data)
+            const container = document.querySelector("#infoContainer");
+            container.innerHTML = `Article created! <br/>Read it <strong><a href="../article.html?id=${data.id}">here</a></strong>!`;
+        })
+    })
     .then((response) => {
         document.querySelector("#uploadBtn").disabled = true
     });
