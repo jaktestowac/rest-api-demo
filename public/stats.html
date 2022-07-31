@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>REST API Demo | User</title>
+    <title>REST API Demo</title>
     <link rel="icon" href="./data/icons/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
@@ -17,15 +17,15 @@
                 <button id="btnArticles" class="button-primary">Articles</button>
             </a>
             <a href="./users.html">
-                <button id="btnUsers" class="button-primary">Users</button>
+                <button id="btnUsers" class="button-primary" disabled readOnly>Users</button>
             </a>
             <a href="./comments.html">
                 <button id="btnComments" class="button-primary">Comments</button>
             </a>
             <a href="./stats.html">
-                <button id="btnStats" class="button-primary">Statistics</button>
+                <button id="btnStats" class="button-disabled" disabled readOnly>Statistics</button>
             </a>
-        </h1>
+            </h1>
 
         <span style="display: flex;align-items:center;justify-self: end;padding-right: 20px;">
 	  <a href="https://jaktestowac.pl" style="text-decoration: none; color: white;" target="_blank" rel="noopener">
@@ -36,25 +36,26 @@
 	  </span>
     </div>
 </header>
-<div id="container"></div>
-<div class="alert" role="alert"></div>
-<section class="add-new-panel">
-    <div>
-        <h2>Add New Entry</h2>
-        <label>Title:</label>
-        <input type="text" class="title" value=""><br>
 
-        <label>Body:</label>
-        <input type="text" class="body" value=""><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
-        <label></label>
-        <button type="button" class="update save button-primary">Save</button>
-        <button type="button" class="cancel">Cancel</button>
-
-        <button class="close" id="close">&times;</button>
-    </div>
-</section>
-<script type="text/javascript" src="js/user.js"></script>
+<div class="container" id="pageHeader" style="font-size:12px;align-content: center;display: flex;align-items: center;justify-content: center;">
+    <h1>Show statistics of:</h1>
+</div>
+<div class="container" style="font-size:12px;align-content: center;display: flex;align-items: center;justify-content: center;">
+    <a href="./userstats.html">
+        <button class="button-primary" id="btnUserStats" style="margin: 20;font-size: 28px;">Users</button>
+    </a>
+    <a href="./articlestats.html">
+        <button class="button-primary" id="btnArticleStats" style="margin: 20;font-size: 28px;">Articles</button>
+    </a>
+</div>
 </body>
 <footer>
     <div class="container" style="font-size:12px;">
