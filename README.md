@@ -10,7 +10,7 @@ All data (such as users and other entities) are stored in json file.
 
 Instructions how to deploy presented service to various free hosting sites. 
 
-
+* [Deploy to Glitch](#deploy-to-glitch)
 * [Deploy to Heroku](#deploy-to-heroku)
 
 ## Deploy on **Local**
@@ -25,7 +25,7 @@ Steps:
 
 Application will be available at `http://localhost:3000`
 
-## Deloy to **Glitch**
+## Deploy to **Glitch**
 No account needed - but your project will be deleted in 5 days
 
 After clicking button below wait a minute or two to finish deployment.
