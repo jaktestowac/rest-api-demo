@@ -27,8 +27,11 @@ Application will be available at `http://localhost:3000`
 
 ## Deloy to **Glitch**
 No account needed - but your project will be deleted in 5 days
+After clicking button below wait a minute or two to finish deployment.
 
 [![Remix on Glitch](https://cdn.glitch.com/2703baf2-b643-4da7-ab91-7ee2a2d00b5b%2Fremix-button.svg)](https://glitch.com/edit/#!/import/github/pbaranski/rest-api-demo)
+
+Go to bottom buttons - click `🔎PREVIEW`, choose `Preview in a new window` 
 
 ## Deploy to **Heroku**
 <a href="https://heroku.com/deploy?template=https://github.com/pbaranski/rest-api-demo/tree/main">
