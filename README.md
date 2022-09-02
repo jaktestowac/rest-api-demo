@@ -27,6 +27,7 @@ Application will be available at `http://localhost:3000`
 
 ## Deloy to **Glitch**
 No account needed - but your project will be deleted in 5 days
+
 [![Remix on Glitch](https://cdn.glitch.com/2703baf2-b643-4da7-ab91-7ee2a2d00b5b%2Fremix-button.svg)](https://glitch.com/edit/#!/import/github/pbaranski/rest-api-demo)
 
 ## Deploy to **Heroku**
