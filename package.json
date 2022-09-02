@@ -38,5 +38,8 @@
     "server-destroy": "^1.0.1",
     "update-notifier": "^2.3.0",
     "yargs": "^10.0.3"
+  },
+    "engines": {
+    "node": ">=16.x"
   }
 }
