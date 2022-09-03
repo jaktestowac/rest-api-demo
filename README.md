@@ -10,6 +10,7 @@ All data (such as users and other entities) are stored in json file.
 
 Instructions how to deploy presented service to various free hosting sites. 
 
+* [Deploy to Vercel](#deploy-to-vercel)
 * [Deploy to Glitch](#deploy-to-glitch)
 * [Deploy to Heroku](#deploy-to-heroku)
 
@@ -25,12 +26,19 @@ Steps:
 
 Application will be available at `http://localhost:3000`
 
+## Deploy to **Vercel**
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fjaktestowac%2Frest-api-demo)
+
+Steps:
+1. TBD
+
 ## Deploy to **Glitch**
 No account needed - but your project will be deleted in 5 days.
 
 After clicking button below wait a minute or two to finish deployment.
 
-[![Remix on Glitch](https://cdn.glitch.me/2703baf2-b643-4da7-ab91-7ee2a2d00b5b%2Fremix-button-v2.svg)](https://glitch.com/edit/#!/import/github/pbaranski/rest-api-demo)
+[![Remix on Glitch](https://cdn.glitch.me/2703baf2-b643-4da7-ab91-7ee2a2d00b5b%2Fremix-button-v2.svg)](https://glitch.com/edit/#!/import/github/jaktestowac/rest-api-demo)
 
 To see website: 
 
@@ -39,7 +47,7 @@ To see website:
 * choose `👯Preview in a new window` 
 
 ## Deploy to **Heroku**
-<a href="https://heroku.com/deploy?template=https://github.com/pbaranski/rest-api-demo/tree/main">
+<a href="https://heroku.com/deploy?template=https://github.com/jaktestowac/rest-api-demo/tree/main">
     <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
 </a>
 
