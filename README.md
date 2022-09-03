@@ -10,7 +10,7 @@ All data (such as users and other entities) are stored in json file.
 
 Instructions how to deploy presented service to various free hosting sites. 
 
-
+* [Deploy to Glitch](#deploy-to-glitch)
 * [Deploy to Heroku](#deploy-to-heroku)
 
 ## Deploy on **Local**
@@ -25,8 +25,21 @@ Steps:
 
 Application will be available at `http://localhost:3000`
 
+## Deploy to **Glitch**
+No account needed - but your project will be deleted in 5 days.
+
+After clicking button below wait a minute or two to finish deployment.
+
+[![Remix on Glitch](https://cdn.glitch.me/2703baf2-b643-4da7-ab91-7ee2a2d00b5b%2Fremix-button-v2.svg)](https://glitch.com/edit/#!/import/github/pbaranski/rest-api-demo)
+
+To see website: 
+
+* go to bottom buttons
+* click `🔎PREVIEW`
+* choose `👯Preview in a new window` 
+
 ## Deploy to **Heroku**
-<a href="https://heroku.com/deploy?template=https://github.com/jaktestowac/rest-api-demo/tree/main">
+<a href="https://heroku.com/deploy?template=https://github.com/pbaranski/rest-api-demo/tree/main">
     <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
 </a>
 
