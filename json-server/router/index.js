@@ -58,7 +58,7 @@ module.exports = function (source) {
 
     // Create routes
     db.forEach(function (value, key) {
-        console.log(key, value);
+        // console.log(key, value);
         if (_.isPlainObject(value)) {
             router.use(`/${key}`, singular(db, key));
             return;
