@@ -289,4 +289,5 @@ server.use("/api", router);
 
 server.listen(port, () => {
   logDebug(`Test Custom Data API listening on port ${port}!`);
+  logDebug(`🎉 Your custom REST API service is up and running!!!`);
 });
