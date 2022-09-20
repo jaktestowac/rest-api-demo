@@ -30,10 +30,10 @@ async function issueGetRequest() {
       articlesData[i].user_name = "Unknown user";
     }
   }
-  // sort articles by date:
-    articlesData.sort(function (a, b) {
-        return a.date < b.date || `${a.id}`.localeCompare(`${b.id}`);
-    });
+// sort articles by date:
+//    articlesData.sort(function (a, b) {
+//        return a.date < b.date || `${a.id}`.localeCompare(`${b.id}`);
+//    });
   displayPostsData(articlesData);
   attachEventHandlers();
 }
