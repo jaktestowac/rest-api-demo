@@ -115,7 +115,7 @@ const validations = (req, res, next) => {
       }
     }
 
-    if (req.method === "POST" && urlEnds.endsWith("/api/users")) {
+    if (req.method === "POST" && urlEnds.includes("/api/users")) {
       // validate mandatory fields:
       if (
         !are_mandatory_fields_valid(req.body, mandatory_non_empty_fields_user)
@@ -367,7 +367,7 @@ const validations = (req, res, next) => {
       }
     }
 
-    if (req.method === "POST" && urlEnds.endsWith("/api/articles")) {
+    if (req.method === "POST" && urlEnds.includes("/api/articles")) {
       if (
         !are_mandatory_fields_valid(
           req.body,
