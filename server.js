@@ -24,51 +24,51 @@ const port = process.env.PORT || 3000;
 
 const customRoutes = (req, res, next) => {
   try {
-//    if (!updatedSchema) {
-//      try {
-//        const host = req.headers.host;
-//        const referer = req.headers.referer;
-//        const schema = JSON.parse(
-//          fs.readFileSync(
-//            path.join(__dirname, "public/tools/schema/openapi_rest_demo.json"),
-//            "utf8"
-//          )
-//        );
-//        const schemaV2 = JSON.parse(
-//          fs.readFileSync(
-//            path.join(__dirname, "public/tools/schema/openapi_rest_demo_v2.json"),
-//            "utf8"
-//          )
-//        );
-//        if (referer !== undefined) {
-//          const newAddr = `${referer.split(":")[0]}://${host}/api`;
-//          if (newAddr !== schema["servers"][0]["url"]) {
-//            schema["servers"][0]["url"] = newAddr;
-//            fs.writeFileSync(
-//              path.join(
-//                __dirname,
-//                "public/tools/schema/openapi_rest_demo.json"
-//              ),
-//              JSON.stringify(schema, null, 2)
-//            );
-//          }
-//          const newAddrV2 = `${referer.split(":")[0]}://${host}/api/v2`;
-//          if (newAddrV2 !== schemaV2["servers"][0]["url"]) {
-//            schemaV2["servers"][0]["url"] = newAddrV2;
-//            fs.writeFileSync(
-//              path.join(
-//                __dirname,
-//                "public/tools/schema/openapi_rest_demo_v2.json"
-//              ),
-//              JSON.stringify(schemaV2, null, 2)
-//            );
-//          }
-//          updatedSchema = true;
-//        }
-//      } catch (error) {
-//        console.log(error);
-//      }
-//    }
+   if (!updatedSchema) {
+     try {
+       const host = req.headers.host;
+       const referer = req.headers.referer;
+       const schema = JSON.parse(
+         fs.readFileSync(
+           path.join(__dirname, "public/tools/schema/openapi_rest_demo.json"),
+           "utf8"
+         )
+       );
+       const schemaV2 = JSON.parse(
+         fs.readFileSync(
+           path.join(__dirname, "public/tools/schema/openapi_rest_demo_v2.json"),
+           "utf8"
+         )
+       );
+       if (referer !== undefined) {
+         const newAddr = `${referer.split(":")[0]}://${host}/api`;
+         if (newAddr !== schema["servers"][0]["url"]) {
+           schema["servers"][0]["url"] = newAddr;
+           fs.writeFileSync(
+             path.join(
+               __dirname,
+               "public/tools/schema/openapi_rest_demo.json"
+             ),
+             JSON.stringify(schema, null, 2)
+           );
+         }
+         const newAddrV2 = `${referer.split(":")[0]}://${host}/api/v2`;
+         if (newAddrV2 !== schemaV2["servers"][0]["url"]) {
+           schemaV2["servers"][0]["url"] = newAddrV2;
+           fs.writeFileSync(
+             path.join(
+               __dirname,
+               "public/tools/schema/openapi_rest_demo_v2.json"
+             ),
+             JSON.stringify(schemaV2, null, 2)
+           );
+         }
+         updatedSchema = true;
+       }
+     } catch (error) {
+       console.log(error);
+     }
+   }
     if (req.method === "GET" && req.url.endsWith("/restoreDB")) {
       const db = JSON.parse(
         fs.readFileSync(path.join(__dirname, "db-base.json"), "utf8")
