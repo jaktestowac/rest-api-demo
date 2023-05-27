@@ -26,13 +26,6 @@ Steps:
 
 Application will be available at `http://localhost:3000`
 
-## Deploy to **Vercel**
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fjaktestowac%2Frest-api-demo)
-
-Steps:
-1. TBD
-
 ## Deploy to **Glitch**
 No account needed - but your project will be deleted in 5 days.
 
@@ -46,12 +39,16 @@ To see website:
 * click `🔎PREVIEW`
 * choose `👯Preview in a new window` 
 
+## Deploy to **Render** [Experimental]
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/jaktestowac/rest-api-demo)
+
 ## Deploy to **Heroku**
+Paid form 2022
 <a href="https://heroku.com/deploy?template=https://github.com/jaktestowac/rest-api-demo/tree/main">
     <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
 </a>
 
-Heroku is a free hosting service for hosting small projects. Easy setup and deploy from the command line via _git_.
+Heroku is a ~~free~~ hosting service for hosting small projects. Easy setup and deploy from the command line via _git_.
 **Data are not persistent! They will be restored to default state** after shutting down application after 30 mins of inactivity.
 If an app has a free web dyno, and that dyno receives no web traffic in a 30-minute period, it will sleep.
 More: https://devcenter.heroku.com/articles/free-dyno-hours#dyno-sleeping
