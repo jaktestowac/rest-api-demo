@@ -4,3 +4,4 @@ services:
     env: node
     buildCommand: npm i
     startCommand: npm run start
+    plan: free

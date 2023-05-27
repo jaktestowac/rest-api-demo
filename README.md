@@ -10,8 +10,8 @@ All data (such as users and other entities) are stored in json file.
 
 Instructions how to deploy presented service to various free hosting sites. 
 
-* [Deploy to Vercel](#deploy-to-vercel)
 * [Deploy to Glitch](#deploy-to-glitch)
+* [Deploy to Render](#deploy-to-render)
 * [Deploy to Heroku](#deploy-to-heroku)
 
 ## Deploy on **Local**
@@ -39,7 +39,8 @@ To see website:
 * click `🔎PREVIEW`
 * choose `👯Preview in a new window` 
 
-## Deploy to **Render** [Experimental]
+## Deploy to **Render** 
+⚠️Experimental
 [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/jaktestowac/rest-api-demo)
 
 ## Deploy to **Heroku**
