@@ -48,7 +48,7 @@ To see website:
 
 * name your app
 * hit `Applay`
-* wait a while and click link to project `Rest API Demo jaktestowac.pl`
+* wait a while and click link to project `Rest API Demo`
 * click link to open app (under porject name and repository)
 * enjoy 750 free hours of service per month
 
