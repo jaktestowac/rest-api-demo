@@ -42,14 +42,19 @@ To see website:
 ## Deploy to **Render**
 
 - Create free account on: https://dashboard.render.com/register
-- After registration hit the button:
+- After successfull registration hit the button:
 
 [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/jaktestowac/rest-api-demo)
 
-You 
+* name your app
+* hit `Applay`
+* wait a while and click link to project `Rest API Demo jaktestowac.pl`
+* click link to open app (under porject name and repository)
+* enjoy 750 free hours of service per month
+
 
 ## Deploy to **Heroku**
-Paid form 2022
+No free option form Q3 2022
 <a href="https://heroku.com/deploy?template=https://github.com/jaktestowac/rest-api-demo/tree/main">
     <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
 </a>
