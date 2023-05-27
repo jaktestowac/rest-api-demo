@@ -39,9 +39,14 @@ To see website:
 * click `🔎PREVIEW`
 * choose `👯Preview in a new window` 
 
-## Deploy to **Render** 
-⚠️Experimental
+## Deploy to **Render**
+
+- Create free account on: https://dashboard.render.com/register
+- After registration hit the button:
+
 [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/jaktestowac/rest-api-demo)
+
+You 
 
 ## Deploy to **Heroku**
 Paid form 2022

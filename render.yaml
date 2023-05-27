@@ -5,3 +5,4 @@ services:
     buildCommand: npm i
     startCommand: npm run start
     plan: free
+    region: frankfurt
