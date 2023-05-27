@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: rad
+    env: node
+	buildCommand: npm i
+	startCommand: npm run start
