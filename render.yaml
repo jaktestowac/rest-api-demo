@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: rad
+    name: Rest API Demo jaktestowac.pl
     env: node
     buildCommand: npm i
     startCommand: npm run start
