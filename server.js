@@ -1,3 +1,13 @@
+// Defensive shim: some very old transitive deps expect `SlowBuffer` global.
+// On recent Node versions `SlowBuffer` may be undefined and cause startup errors
+// like "Cannot read properties of undefined (reading 'prototype')" when
+// packages such as `buffer-equal-constant-time` are loaded. Define a
+// lightweight fallback to avoid crashes in environments (like some hosts)
+// running newer Node versions.
+if (typeof global.SlowBuffer === 'undefined' && typeof Buffer !== 'undefined') {
+  global.SlowBuffer = Buffer;
+}
+
 const jsonServer = require("./json-server");
 const { validations, validateEmail } = require("./validators");
 const fs = require("fs");

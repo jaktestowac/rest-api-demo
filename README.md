@@ -47,16 +47,29 @@ Application will be available at `http://localhost:3000`
 
 ## Deploy to **Render**
 
-- Create free account on: https://dashboard.render.com/register
-- After successfull registration hit the button:
+ - Create a free account: https://dashboard.render.com/register
+ - After successful registration, click the Deploy button below:
 
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/jaktestowac/rest-api-demo)
+ [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/jaktestowac/rest-api-demo)
 
-- name your app
-- hit `Applay`
-- wait a while and click link to project `Rest API Demo`
-- click link to open app (under porject name and repository)
-- enjoy 750 free hours of service per month
+ Deployment steps (high level):
+
+ - Name your app
+ - Click Apply
+ - Wait for the deploy to finish and open the project link to view your app
+
+ Note: Render offers free instance types and paid plans — check the Render pricing page for current limits and terms
+
+Note about Node version on Render
+
+- If you see an error like:
+
+```
+TypeError: Cannot read properties of undefined (reading 'prototype')
+	at Object.<anonymous> (node_modules/buffer-equal-constant-time/index.js:37:35)
+```
+
+This is caused by a transitive dependency that expects an older Node runtime (it references `SlowBuffer`), while Render may use a very recent Node version by default. To fix this, pin the Node version in `package.json` (we recommend `18.x`) or set the Node version in your Render service settings. The project already includes an `.nvmrc` with `18` to help local development.
 
 ## Deploy to **Heroku**
 
